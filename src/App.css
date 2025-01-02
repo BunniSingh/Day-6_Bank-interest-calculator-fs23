@@ -1,42 +1,48 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.navbar{
+  padding: 1rem;
+  background-color: blueviolet;
+  color: #fff;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.container{
+  display: flex;
+  padding: 1rem;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container h1{
+  margin-left: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.slidebar{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap : 1rem;
 }
 
-.card {
-  padding: 2em;
+.slidebar-container{
+  display: flex;
+  flex-direction: column;
+  gap : .5rem;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.389);
 }
 
-.read-the-docs {
-  color: #888;
+.values{
+  display: flex;
+  justify-content: space-between;
+}
+
+#year{
+  padding: 1rem;
+  outline: none;
+}
+.chart-container{
+  flex:1;
 }
