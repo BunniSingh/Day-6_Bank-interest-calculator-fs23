@@ -27,7 +27,7 @@ const Slidebar = () => {
     }
 
     const intrestRateChange = (e) =>{
-        
+        setIntrestRate(e.target.value);
     }
 
     const yearChange = (e) =>{
