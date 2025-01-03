@@ -1,12 +1,6 @@
-import React, { useState } from 'react'
 
-const Slidebar = () => {
-    const [principle, setPrinciple] = useState(3000);
-    const [downPayment, setDownPayment] = useState(300);
-    const [loanAmount, setLoanAmount] = useState(700);
-    const [intrestRate, setIntrestRate] = useState(5);
-    const [year, setYear] = useState(5);
 
+const Slidebar = ({principle, downPayment, loanAmount, intrestRate, year, setPrinciple, setDownPayment, setLoanAmount, setIntrestRate, setYear}) => {
     const principleChange = (e) => {
         let amount = Number(e.target.value);
         setPrinciple(amount);
@@ -57,7 +51,7 @@ const Slidebar = () => {
                 <h1>$ {downPayment}</h1>
                 <input type="range" className='downPayment'
                     min={0}
-                    max={3500}
+                    max={principle}
                     value={downPayment}
                     step={100}
                     onChange={downPaymentChange}
@@ -73,7 +67,7 @@ const Slidebar = () => {
                 <h1>$ {loanAmount}</h1>
                 <input type="range" className='loanAmount'
                     min={0}
-                    max={3500}
+                    max={principle}
                     value={loanAmount}
                     step={100}
                     onChange={loanAmountChange}
